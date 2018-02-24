@@ -1,4 +1,4 @@
-# Squats App Planning
+# Squats App
 ### 💪 A Team Workout App Built in React
 
 ##### by Ginger Lee Kretschmer -- _February 23 2018_
