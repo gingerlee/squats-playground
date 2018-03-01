@@ -1,21 +1,29 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
-import Welcome from '../components/Welcome';
-import Home from '../components/Home';
-import WorkoutDetail from '../components/WorkoutDetail';
+import Welcome from './Welcome';
+import Home from './Home';
+import WorkoutDetail from './WorkoutDetail';
 
 class App extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      masterWorkoutList: [
+      workoutList: [
         {
           title: 'Jump!',
           day: 'Day 1',
           duration: '20min',
-          image: ''
+          image: '',
+          videoLink: ''
+        },
+        {
+          title: 'Squat!',
+          day: 'Day 2',
+          duration: '25min',
+          image: '',
+          videoLink: ''
         },
       ]
     };
@@ -33,7 +41,7 @@ class App extends React.Component {
         `}</style>
         <Switch>
           <Route exact path='/' render={()=><Welcome />} />
-          <Route exact path='/home' render={()=><Home />} />
+          <Route exact path='/home' render={()=><Home workoutList={this.state.masterWrokoutList} />} />
           <Route exact path='/workout-detail' render={()=><WorkoutDetail />} />
           <Route component={Error404} />
         </Switch>
