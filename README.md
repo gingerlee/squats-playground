@@ -17,6 +17,9 @@ The goal of this app is to leverage free workout content to a group of intereste
 ### Minimum Viable Product Features
 _A list of the absolute minimum features the project requires to meet_
 
+#### Start Page:
+* **Splash Page to Enter Site:** User will be presented with a landing page with a few different pieces of information about the challenge and a button to enter the site.
+
 #### HomePage:
 * **See User Name logged in:** User will be able to see their name logged in at the top of the screen at all times. This initially will be hardcoded. Logging in and out will be additional features after MVP.
 
