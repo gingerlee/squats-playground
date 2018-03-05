@@ -1,7 +1,7 @@
 # Squats App
 ### 💪 A Team Workout App Built in React
 
-##### by Ginger Lee Kretschmer -- _February 23 2018_
+##### by Ginger Lee Kretschmer -- _March 4th 2018_
 
 
 ## Project Description
@@ -39,6 +39,9 @@ _A list of the absolute minimum features the project requires to meet_
 * **Mark workout as completed:** Users will be able to mark the workout completed. This action will add user name to the team leaderboard which shows who in the team has marked that workout completed.
 
 * **View team leaderboard:** User will be able to see which teammates, including themselves, have completed the workout video of the day.
+
+### Component Tree
+![component tree](./src/assets/images/component-tree.png)
 
 ### Tools, frameworks, libraries, APIs for MVP
 * React

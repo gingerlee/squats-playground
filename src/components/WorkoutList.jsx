@@ -1,5 +1,4 @@
 import React from 'react';
-import WorkoutDetail from './User.jsx';
 import PropTypes from 'prop-types';
 
 function WorkoutList(props) {
