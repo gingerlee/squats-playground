@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Error404 from './Error404';
 import Welcome from './Welcome';
 
@@ -15,9 +16,9 @@ class App extends React.Component {
           day: 'Day 1',
           duration: '20min',
           level: 'Intermediate',
-          indensity: 'Medium',
+          intensity: 'Medium',
           image: '',
-          videoLink: ''
+          videoId: ''
         },
       ]
     };
@@ -34,9 +35,9 @@ class App extends React.Component {
           }
         `}</style>
         <Switch>
-          <Route component={Error404} />
 
           <Route exact path='/' render={()=><Welcome />} />
+          <Route component={Error404} />
         </Switch>
       </div>
     );

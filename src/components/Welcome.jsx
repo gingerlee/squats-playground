@@ -1,5 +1,5 @@
 import React from 'react';
-import RaisedButton from 'material-ui';
+import RaisedButton from 'material-ui/RaisedButton';
 
 function Welcome(){
   return(
