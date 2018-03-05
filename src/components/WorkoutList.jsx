@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WorkoutSmall from './WorkoutSmall';
 
 function WorkoutList(props) {
   return (
@@ -7,9 +8,13 @@ function WorkoutList(props) {
 
       <div className='cards'>
         {props.workoutList.map((workout, index) =>
-          <Workout
-            name={workout.name}
-            image={workout.image}
+          <WorkoutSmall
+            title={workout.title}
+            day={workout.day}
+            duration={workout.duration}
+            level={workout.level}
+            intensity={workout.intensity}
+            image={workout.imgae}
             key={index} />
         )}
       </div>
@@ -17,7 +22,7 @@ function WorkoutList(props) {
           .cards {
           display: grid;
           grid-gap: 30px;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           margin: 0 3em;
         }
       `}</style>
@@ -26,7 +31,7 @@ function WorkoutList(props) {
 }
 
 WorkoutList.propTypes = {
-  workoutList: PropTypes.array
+  workoutList: PropTypes.object
 };
 
 export default WorkoutList;

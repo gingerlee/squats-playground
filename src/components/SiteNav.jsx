@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Navbar, NavItem } from 'react-materialize';
 
-function Nav() {
+function SiteNav() {
   const linkDecoration = {
     textDecoration: 'none',
     margin: '10px'
   };
   return(
     <div>
-      <Link style={linkDecoration} to='/'><a className='cyan-text'>SQUATS APP</a></Link>
-      <Link style={linkDecoration} to='/home'><a className='cyan-text'>Home</a></Link>
+      <Navbar brand='logo' right>
+        <NavItem><Link style={linkDecoration} to='/challenge'><a className='cyan-text'>Challenge Home</a></Link></NavItem>
+      </Navbar>
+
       <style jsx>{`
           a:hover {
             opacity: .5;
@@ -24,4 +27,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default SiteNav;

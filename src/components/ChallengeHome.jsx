@@ -1,17 +1,16 @@
 import React from 'react';
 import Hero from './Hero';
 import WorkoutList from './WorkoutList';
-import MasterTeamList from './MasterTeamList';
-import homeIamge from './../assets/images/home-image.jpg';
-
+import TeamList from './TeamList';
+import welcomeImage from './../assets/images/welcome-image.jpg';
 import PropTypes from 'prop-types';
 
-function Home(props){
+function ChallengeHome(props){
   return(
     <div>
       <Hero
-        heroImage={homeImage}
-        heroTitle={'Start the Challenge'} />
+        heroImage={welcomeImage}
+        heroTitle={'Challenge Home'} />
       <div className='intro'>
         <h3 className='header'>21 Days of Squats!</h3>
         <p className='flow-text center'>A curated list of 21 workouts to help you stay in shape</p>
@@ -22,7 +21,7 @@ function Home(props){
       </div>
 
       <div className='team-list'>
-        <MasterTeamList masterTeamList={props.masterTeamList} />
+        <TeamList userList={props.userList} />
       </div>
 
       <style jsx>{`
@@ -33,20 +32,20 @@ function Home(props){
           text-align: center;
           margin-bottom: 30px;
         }
-          .team-list  {
-            margin: 0 15vw 20vh 15vw;
-          }
-          .workout-list  {
-            margin: 0 15vw 20vh 15vw;
-          }
+        .team-list  {
+          margin: 0 15vw 20vh 15vw;
+        }
+        .workout-list  {
+          margin: 0 15vw 20vh 15vw;
+        }
       `}</style>
     </div>
   );
 }
 
-Home.propTypes = {
-  workoutList: PropTypes.array
-  masterTeamList: PropTypes.array
+ChallengeHome.propTypes = {
+  workoutList: PropTypes.object,
+  userList: PropTypes.object
 };
 
-export default Home;
+export default ChallengeHome;

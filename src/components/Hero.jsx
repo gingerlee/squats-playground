@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Nav from './Nav';
 
 function Hero(props) {
   return (
     <div>
-      <Nav className='nav' />
       <h1>{props.heroTitle}</h1>
       <style jsx>{`
         div {

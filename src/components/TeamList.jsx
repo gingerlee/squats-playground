@@ -2,32 +2,32 @@ import React from 'react';
 import User from './User.jsx';
 import PropTypes from 'prop-types';
 
-function MasterTeamList(props) {
+function TeamList(props) {
   return (
     <div>
-
-      <div className='cards'>
-        {props.masterTeamList.map((user, index) =>
+      <div className='tiles'>
+        {props.teamList.map((user, index) =>
           <User
             name={user.name}
+            title={user.title}
             image={user.image}
             key={index} />
         )}
       </div>
       <style jsx>{`
-          .cards {
+          .tiles {
           display: grid;
-          grid-gap: 30px;
-          grid-template-columns: repeat(3, 1fr);
-          margin: 0 3em;
+          grid-gap: 100px;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 0 2em;
         }
       `}</style>
     </div>
   );
 }
 
-MasterTeamList.propTypes = {
-  masterTeamList: PropTypes.array
+TeamList.propTypes = {
+  teamList: PropTypes.object
 };
 
-export default MasterTeamList;
+export default TeamList;
