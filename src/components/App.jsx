@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import Welcome from './Welcome';
 import ChallengeHome from './ChallengeHome';
-import SiteNav from './SiteNav';
+// import SiteNav from './SiteNav';
 
 class App extends React.Component {
 
@@ -62,19 +62,19 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <style global jsx>{`
+        <style jsx global>{`
           html, body, h1, h2, h3, h4, p, ul, li {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
           }
         `}</style>
-        <SiteNav />
+      
         <Switch>
+          <Route component={Error404} />
           <Route exact path='/' component={Welcome} /> />
           <Route path='/challenge'
             render={()=> <ChallengeHome workoutList={this.state.workoutsById}  userList={this.state.usersById} /> } />
-          <Route component={Error404} />
         </Switch>
       </div>
     );
@@ -83,3 +83,6 @@ class App extends React.Component {
 
 
 export default App;
+
+
+// <SiteNav />

@@ -1,7 +1,7 @@
 import React from 'react';
-import Hero from './Hero';
 import WorkoutList from './WorkoutList';
 import TeamList from './TeamList';
+import Hero from './Hero';
 import welcomeImage from './../assets/images/welcome-image.jpg';
 import PropTypes from 'prop-types';
 
